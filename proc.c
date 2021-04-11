@@ -26,6 +26,10 @@ pinit(void)
   initlock(&ptable.lock, "ptable");
 }
 
+void shout(void) {
+  cprintf("shout!!!!!!!!!!!\n");
+}
+
 // Must be called with interrupts disabled
 int
 cpuid() {
