@@ -14,6 +14,12 @@ sys_shout(void) {
 }
 
 int
+sys_ps(void) {
+  procdump();
+  return 0;
+}
+
+int
 sys_fork(void)
 {
   return fork();

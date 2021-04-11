@@ -536,3 +536,8 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+void ps(void) {
+  procdump();
+  return;
+}
