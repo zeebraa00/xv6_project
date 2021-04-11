@@ -541,3 +541,23 @@ void ps(void) {
   procdump();
   return;
 }
+
+int thread_create(void *(*function)(void *), void *arg, void *stack);
+{
+  return 0;
+}
+
+int thread_join(int tid, void **retval);
+{
+  return 0;
+}
+
+int thread_exit(void *retval);
+{
+  return 0;
+}
+
+int gettid(void);
+{
+  return 0;
+}

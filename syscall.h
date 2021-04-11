@@ -22,3 +22,7 @@
 #define SYS_close  21
 #define SYS_shout  22
 #define SYS_ps     23
+#define SYS_thread_create	24
+#define SYS_thread_join		25
+#define SYS_thread_exit		26
+#define SYS_gettid		27

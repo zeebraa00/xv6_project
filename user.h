@@ -25,6 +25,10 @@ int sleep(int);
 int uptime(void);
 void shout(void);
 void ps(void);
+int thread_create(void *(*function)(void *), void *arg, void *stack);
+int thread_join(int tid, void **retval);
+int thread_exit(void *retval);
+int gettid(void);
 
 // ulib.c
 int stat(const char*, struct stat*);
