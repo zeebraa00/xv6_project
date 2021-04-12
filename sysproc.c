@@ -22,18 +22,18 @@ sys_ps(void) {
 int
 sys_thread_create(void)
 {
-  int fun, arg, stack;
-  if (argint(0, &fun) < 0 || argint(1, &arg) < 0 || argint(2, &stack) < 0)
+  int func, arg, stack;
+  if (argint(0, &func) < 0 || argint(1, &arg) < 0 || argint(2, &stack) < 0)
     return -1;
 
-  return thread_create((void*)(fun), (void *)arg, (void *)stack);
+  return thread_create((void*)(func), (void *)arg, (void *)stack);
 }
 
 int
 sys_thread_join(void)
 {
-  int tid;
   void **retval;
+  int tid;
   if (argint(0, &tid) < 0 || argint(1, (int*)&retval) < 0)
     return -1;
 
