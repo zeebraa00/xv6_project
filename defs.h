@@ -119,13 +119,15 @@ void            sleep(void*, struct spinlock*);
 void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
-void            yield(void);
 void            shout(void);
 void            ps(void);
 int             thread_create(void *(*function)(void *), void *arg, void *stack);
 int             thread_join(int tid, void **retval);
 int             thread_exit(void *retval);
 int             gettid(void);
+void            yield(void);
+int             getnice(int pid);
+int             setnice(int pid, int value);
 
 // swtch.S
 void            swtch(struct context**, struct context*);

@@ -26,3 +26,6 @@
 #define SYS_thread_join		25
 #define SYS_thread_exit		26
 #define SYS_gettid		27
+#define SYS_getnice 28
+#define SYS_setnice 29
+#define SYS_yield   30

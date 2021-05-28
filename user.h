@@ -29,6 +29,9 @@ int thread_create(void *(*function)(void *), void *arg, void *stack);
 int thread_join(int tid, void **retval);
 int thread_exit(void *retval);
 int gettid(void);
+int getnice(int pid);
+int setnice(int pid, int value);
+int yield(void);
 
 // ulib.c
 int stat(const char*, struct stat*);

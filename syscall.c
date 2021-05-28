@@ -109,6 +109,9 @@ extern int sys_thread_create(void);
 extern int sys_thread_join(void);
 extern int sys_thread_exit(void);
 extern int sys_gettid(void);
+extern int sys_getnice(void);
+extern int sys_setnice(void);
+extern int sys_yield(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -138,6 +141,9 @@ static int (*syscalls[])(void) = {
 [SYS_thread_join]      sys_thread_join,
 [SYS_thread_exit]      sys_thread_exit,
 [SYS_gettid]      sys_gettid,
+[SYS_getnice]  sys_getnice,
+[SYS_setnice]  sys_setnice,
+[SYS_yield]  sys_yield,
 };
 
 void

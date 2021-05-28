@@ -51,6 +51,8 @@ struct proc {
   char name[16];               // Process name (debugging)
   int tid;                     // Thread id
   void *retval;                // Return value
+  int nice;
+  int is_yield;
 };
 
 // Process memory is laid out contiguously, low addresses first:

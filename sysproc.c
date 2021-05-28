@@ -8,6 +8,34 @@
 #include "proc.h"
 
 int
+sys_getnice(void)
+{
+  int pid;
+  if (argint(0, &pid) < 0) return -1;
+
+  return getnice(pid);
+}
+
+int
+sys_setnice(void)
+{
+  int pid, var;
+  if (argint(0, &pid) < 0 || argint(1, &var) < 0) return -1;
+
+  return setnice(pid, var);
+}
+
+int
+sys_yield(void)
+{
+  if (myproc()->pid > 2) {
+    myproc()->is_yield = 1;
+  }
+  yield();
+  return 0;
+}
+
+int
 sys_shout(void) {
   shout();
   return 0;
